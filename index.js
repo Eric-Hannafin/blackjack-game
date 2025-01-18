@@ -16,9 +16,7 @@ function startGame() {
         message = "You're out of the game! "
         isAlive = false
     }
-    console.log(message)
+    messageEl.textContent = message
 }
-
-console.log(messageEl.textContent)
 
 document.getElementById("startButton").addEventListener("click", () => startGame());

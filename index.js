@@ -23,4 +23,9 @@ function startGame() {
     messageEl.textContent = message
 }
 
+function drawCard() {
+
+}
+
 document.getElementById("startButton").addEventListener("click", () => startGame());
+document.getElementById("drawCardButton").addEventListener("click", () => drawCard())

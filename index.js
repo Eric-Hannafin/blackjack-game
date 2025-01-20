@@ -13,6 +13,12 @@ function startGame() {
     renderGame()
 }
 
+function resetGame() {
+    sum = 0;
+    sumEl.textContent = "Sum: "
+    cardEl.textContent = "Cards: "
+}
+
 function renderGame() {
     sumEl.textContent = "Sum: " + sum
     for (let i = 0; i < cards.length; i++) {
@@ -26,6 +32,7 @@ function renderGame() {
     } else {
         message = "You're out of the game! "
         isAlive = false
+        resetGame()
     }
     messageEl.textContent = message
 }

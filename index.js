@@ -1,3 +1,5 @@
+import { Deck } from './deck.js'
+
 let firstCard = 10
 let secondCard = 4
 let cards = [firstCard, secondCard]
@@ -20,6 +22,7 @@ function resetGame() {
 }
 
 function renderGame() {
+    console.log(test)
     sumEl.textContent = "Sum: " + sum
     for (let i = 0; i < cards.length; i++) {
         cardEl.textContent += cards[i] + " "

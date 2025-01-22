@@ -1,6 +1,6 @@
 export class Deck {
     constructor() {
-        this.suits = ["hearts", "diamonds", "spades", "clubs"]
+        this.suits = ["hearts", "diamonds", "spades", "clubs"];
         this.ranks = [
             { rank: "ace", value: "11" },
             { rank: "queen", value: "10" },
@@ -16,6 +16,7 @@ export class Deck {
         ]
         this.deck = this.createDeck();
     }
+
     createDeck() {
         let deck = [];
         for (let suit of this.suits) {
@@ -25,9 +26,20 @@ export class Deck {
                     value: rank.value,
                     suit: suit,
                     image: 'images/${rank.rank}_of_${suit.suit}.png'
-                })
+                });
             }
         }
         return deck;
+    }
+
+    shuffle() {
+        for (let i = this.deck.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random * (i + 1));
+            [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
+        }
+    }
+
+    drawCard() {
+        return this.deck.pop();
     }
 }

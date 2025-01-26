@@ -11,6 +11,8 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardEl = document.getElementById("card-el")
 
+let deck = new Deck();
+
 function startGame() {
     renderGame()
 }
@@ -51,6 +53,11 @@ function drawCard() {
 
 function updateCards(newCard) {
     cardEl.textContent += " " + newCard
+}
+
+function generateDeck() {
+    deck.createDeck;
+    deck.shuffle;
 }
 
 document.getElementById("startButton").addEventListener("click", () => startGame());
